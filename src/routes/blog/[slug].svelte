@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script context="module">
   export async function preload({ params }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
@@ -13,8 +13,8 @@
   }
 </script>
 
-<script lang="ts">
-  export let post: { slug: string; title: string; html: unknown };
+<script>
+  export let post;
 </script>
 
 <style>

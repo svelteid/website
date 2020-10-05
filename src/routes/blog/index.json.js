@@ -1,5 +1,3 @@
-import type { ServerResponse } from 'http';
-import type { Request } from 'polka';
 import posts from './_posts';
 
 const contents = JSON.stringify(
@@ -11,7 +9,7 @@ const contents = JSON.stringify(
   })
 );
 
-export function get(_: Request, res: ServerResponse) {
+export function get(_, res) {
   res.writeHead(200, {
     'Content-Type': 'application/json'
   });
