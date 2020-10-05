@@ -6,7 +6,7 @@
   publish = "__sapper__/export"
 
   # Default build command.
-  command = "yarn export"
+  command = "npm run export"
 
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
