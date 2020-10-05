@@ -40,9 +40,7 @@
     "rollup-plugin-terser": "7.0.2",
     "sapper": "0.28.10",
     "svelte": "3.29.0",
-    "svelte-check": "1.0.55",
-    "svelte-preprocess": "4.3.2",
-    "tslib": "2.0.1"
+    "svelte-preprocess": "4.3.2"
   },
   "husky": {
     "hooks": {
@@ -50,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,svelte}": [
       "npm run format",
       "npm run lint -- --max-warnings 0"
     ]
