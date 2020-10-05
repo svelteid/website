@@ -7,14 +7,19 @@
 
 	%sapper.base%
 
-	<link rel="stylesheet" href="global.css">
 	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 	<link rel="icon" type="image/png" href="favicon.png">
 
-	<!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
-	%sapper.scripts%
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		rel="preload"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+		as="font"
+		type="font/woff2"
+		crossorigin
+	/>
+
+	<link rel="preload" href="/global.css" as="style" onload='this.onload=null;this.rel="stylesheet"' />
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -25,9 +30,14 @@
 	     the current page has one -->
 	%sapper.head%
 </head>
-<body>
+<body class="font-body leading-normal">
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id="sapper">%sapper.html%</div>
+
+	<!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+	%sapper.scripts%
 </body>
 </html>
