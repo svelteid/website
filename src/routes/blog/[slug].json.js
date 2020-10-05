@@ -1,5 +1,3 @@
-import type { ServerResponse } from 'http';
-import type { Request } from 'polka';
 import posts from './_posts';
 
 const lookup = new Map();
@@ -7,7 +5,7 @@ posts.forEach(post => {
   lookup.set(post.slug, JSON.stringify(post));
 });
 
-export function get(req: Request, res: ServerResponse) {
+export function get(req, res) {
   // the `slug` parameter is available because
   // this file is called [slug].json.js
   const { slug } = req.params;
