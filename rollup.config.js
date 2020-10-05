@@ -21,7 +21,12 @@ const onwarn = (warning, onwarn) =>
 const svelteOptions = {
   dev,
   hydratable: true,
-  preprocess: sveltePreprocess()
+  preprocess: sveltePreprocess({
+    postcss: true,
+    defaults: {
+      style: 'postcss'
+    }
+  })
 };
 
 export default {
