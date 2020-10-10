@@ -1,7 +1,7 @@
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+    purgeLayersByDefault: true
   },
   purge: false,
   theme: {
@@ -10,11 +10,12 @@ module.exports = {
         body:
           'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif'
       },
-      color: {
-        primary: '#ff3c00'
+      colors: {
+        primary: '#ff3c00',
+        secondary: '#676778'
       }
-    },
+    }
   },
   variants: {},
-  plugins: [require('@tailwindcss/typography')],
-}
+  plugins: [require('@tailwindcss/typography')]
+};

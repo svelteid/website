@@ -9,7 +9,7 @@
     "preexport": "NODE_ENV=production npm run build:tw",
     "build:tw": "postcss src/styles/tailwind.css -o static/global.css",
     "lint": "eslint --fix \"**/*.{js,svelte}\"",
-    "format": "prettier --write \"./**/*.{js,svelte}\""
+    "format": "prettier --write \"./**/*.{js,yaml,svelte}\""
   },
   "dependencies": {
     "compression": "1.7.4",
@@ -27,6 +27,7 @@
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@rollup/plugin-replace": "2.3.3",
+    "@rollup/plugin-yaml": "2.1.1",
     "@tailwindcss/typography": "0.2.0",
     "autoprefixer": "10.0.1",
     "babel-eslint": "10.1.0",
