@@ -3,6 +3,7 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
+import yaml from '@rollup/plugin-yaml';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import config from 'sapper/config/rollup.js';
@@ -47,6 +48,7 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
+      yaml(),
 
       legacy &&
         babel({
@@ -97,7 +99,8 @@ export default {
       resolve({
         dedupe: ['svelte']
       }),
-      commonjs()
+      commonjs(),
+      yaml()
     ],
     external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 

@@ -13,6 +13,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 15.1.0_rollup@2.28.2
   '@rollup/plugin-node-resolve': 9.0.0_rollup@2.28.2
   '@rollup/plugin-replace': 2.3.3_rollup@2.28.2
+  '@rollup/plugin-yaml': 2.1.1_rollup@2.28.2
   '@tailwindcss/typography': 0.2.0_tailwindcss@1.8.10
   autoprefixer: 10.0.1_postcss@8.1.1
   babel-eslint: 10.1.0_eslint@7.10.0
@@ -1095,6 +1096,17 @@ packages:
       rollup: ^1.20.0 || ^2.0.0
     resolution:
       integrity: sha512-XPmVXZ7IlaoWaJLkSCDaa0Y6uVo5XQYHhiMFzOd5qSv5rE+t/UJToPIOE56flKIxBFQI27ONsxb7dqHnwSsjKQ==
+  /@rollup/plugin-yaml/2.1.1_rollup@2.28.2:
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.28.2
+      js-yaml: 3.14.0
+      rollup: 2.28.2
+      tosource: 1.0.0
+    dev: true
+    peerDependencies:
+      rollup: ^1.20.0 || ^2.0.0
+    resolution:
+      integrity: sha512-CnGD3dbDhP+JeKFX7kJuaBOa7jVzXpl3G8lXp1hasB87cDYOz7qNWd4cFPmYbxMsT/8OCVsceIpRtQ+cj9uxBw==
   /@rollup/pluginutils/3.1.0_rollup@2.28.2:
     dependencies:
       '@types/estree': 0.0.39
@@ -4747,6 +4759,12 @@ packages:
       node: '>=8.0'
     resolution:
       integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
+  /tosource/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-QtiN0RZhi88A1hBt1URvNCeQL/E=
   /totalist/1.1.0:
     dev: false
     engines:
@@ -4996,6 +5014,7 @@ specifiers:
   '@rollup/plugin-commonjs': 15.1.0
   '@rollup/plugin-node-resolve': 9.0.0
   '@rollup/plugin-replace': 2.3.3
+  '@rollup/plugin-yaml': 2.1.1
   '@tailwindcss/typography': 0.2.0
   autoprefixer: 10.0.1
   babel-eslint: 10.1.0

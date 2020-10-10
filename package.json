@@ -9,7 +9,7 @@
     "preexport": "NODE_ENV=production npm run build:tw",
     "build:tw": "postcss src/styles/tailwind.css -o static/global.css",
     "lint": "eslint --fix \"**/*.{js,svelte}\"",
-    "format": "prettier --write \"./**/*.{js,svelte}\""
+    "format": "prettier --write \"./**/*.{js,yaml,svelte}\""
   },
   "dependencies": {
     "compression": "1.7.4",
