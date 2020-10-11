@@ -18,6 +18,7 @@ devDependencies:
   autoprefixer: 10.0.1_postcss@8.1.1
   babel-eslint: 10.1.0_eslint@7.10.0
   cssnano: 4.1.10
+  dotenv: 8.2.0
   eslint: 7.10.0
   eslint-config-prettier: 6.12.0_eslint@7.10.0
   eslint-plugin-import: 2.22.1_eslint@7.10.0
@@ -1985,6 +1986,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==
+  /dotenv/8.2.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
   /electron-to-chromium/1.3.576:
     dev: true
     resolution:
@@ -5020,6 +5027,7 @@ specifiers:
   babel-eslint: 10.1.0
   compression: 1.7.4
   cssnano: 4.1.10
+  dotenv: 8.2.0
   eslint: 7.10.0
   eslint-config-prettier: 6.12.0
   eslint-plugin-import: 2.22.1
