@@ -3,3 +3,9 @@
   title: Dokumentasi Svelte
   description: Dokumentasi Svelte adalah salah satu sumber terlengkap. Kamu bisa menemukan segalanya, di mulai dari tutorial, contoh-contoh, sampai ke referensi API
   featured: true
+
+- url: https://blogzen.js.org
+  type: dokumentasi
+  title: Blog Zen
+  description: Blog personal yang dibuat dengan Svelte dan terkadang membahas Svelte
+  featured: true
