@@ -7,7 +7,7 @@
     "predev": "npm run build:tw",
     "export": "sapper export --legacy",
     "preexport": "NODE_ENV=production npm run build:tw",
-    "build:tw": "postcss src/styles/tailwind.css -o static/global.css",
+    "build:tw": "postcss src/styles/global.css -o static/global.css",
     "lint": "eslint --fix \"**/*.{js,svelte}\"",
     "format": "prettier --write \"./**/*.{js,yaml,svelte}\""
   },

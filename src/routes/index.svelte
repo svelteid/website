@@ -10,13 +10,6 @@
 </script>
 
 <style>
-  .wrapper {
-    @apply mt-10;
-    @apply px-20;
-    @apply py-10;
-    @apply max-w-none;
-  }
-
   .heading {
     @apply mt-0;
   }
@@ -31,15 +24,28 @@
   }
 
   .link:hover {
+    @apply underline;
     @apply text-primary;
+  }
+
+  .button-link {
+    @apply link;
+    @apply p-3;
+    @apply mt-8;
+    @apply rounded;
+  }
+
+  .button-link:hover {
+    @apply underline;
+    @apply bg-gray-300;
   }
 </style>
 
 <SEO title="{siteName} • {title}" />
 
-<section class="wrapper prose prose-lg flex justify-around">
+<section class="wrapper prose prose-lg flex justify-around mt-10">
   <div class="self-center">
-    <h5 class="text-primary font-semibold uppercase">Selamat Datang</h5>
+    <span class="text-primary font-semibold uppercase">Selamat Datang</span>
     <h3 class="heading">{title}</h3>
     <p>{description}</p>
 
@@ -65,17 +71,37 @@
   </div>
 </section>
 
-<section class="wrapper prose prose-lg bg-gray-100 mb-6">
-  <div class="text-center">
-    <h6 class="uppercase">Mau Belajar Svelte?</h6>
+<section class="wrapper prose prose-lg bg-gray-100 mt-10">
+  <header class="text-center">
+    <span class="uppercase">Mau Belajar Svelte?</span>
     <h2 class="heading">Materi Pembelajaran</h2>
-  </div>
+  </header>
 
-  <div class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
+  <section class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
     {#each learnings as learning}
       {#if learning.featured}
         <BoxLearning {...learning} />
       {/if}
     {/each}
-  </div>
+  </section>
+
+  {#if learnings.length >= 3}
+    <footer class="text-center">
+      <a href="/belajar" class="button-link">
+        Lihat Lebih Banyak
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="ml-1">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </footer>
+  {/if}
 </section>

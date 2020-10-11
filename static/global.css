@@ -22532,6 +22532,14 @@ video {
           animation: bounce 1s infinite;
 }
 
+.wrapper {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  max-width: none;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
