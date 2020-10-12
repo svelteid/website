@@ -1,0 +1,20 @@
+- url: https://svelte.dev
+  type: library
+  title: Svelte Material UI
+  description: Library Svelte JS yang menyediakan kumpulan UI Component berbasis Material Design
+  featured: true
+  tags: UI, COMPONENT, MATERIAL DESIGN
+
+- url: https://routify.dev
+  type: library
+  title: Routify
+  description: Routify adalah library untuk Routing di Svelte secara otomatis berdasarkan struktur file
+  featured: true
+  tags: ROUTING, NAVIGATION
+
+- url: https://github.com/sjones6/electron-svelte
+  type: boilerplate
+  title: Electron Svelte
+  description: Boilerplate untuk membangun aplikasi Desktop menggunakan Svelte dan Electron JS
+  featured: true
+  tags: DESKTOP, ELECTRON JS
