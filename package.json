@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "compression": "1.7.4",
+    "isomorphic-fetch": "3.0.0",
     "polka": "next",
     "sirv": "1.0.6"
   },
@@ -23,6 +24,7 @@
     "@babel/preset-env": "7.11.5",
     "@babel/runtime": "7.11.2",
     "@fullhuman/postcss-purgecss": "3.0.0",
+    "@intrnl/svelte-query": "0.3.1",
     "@rollup/plugin-babel": "5.2.1",
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",

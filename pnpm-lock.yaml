@@ -1,5 +1,6 @@
 dependencies:
   compression: 1.7.4
+  isomorphic-fetch: 3.0.0
   polka: 1.0.0-next.11
   sirv: 1.0.6
 devDependencies:
@@ -9,6 +10,7 @@ devDependencies:
   '@babel/preset-env': 7.11.5_@babel+core@7.11.6
   '@babel/runtime': 7.11.2
   '@fullhuman/postcss-purgecss': 3.0.0
+  '@intrnl/svelte-query': 0.3.1_svelte@3.29.0
   '@rollup/plugin-babel': 5.2.1_@babel+core@7.11.6+rollup@2.28.2
   '@rollup/plugin-commonjs': 15.1.0_rollup@2.28.2
   '@rollup/plugin-node-resolve': 9.0.0_rollup@2.28.2
@@ -1008,6 +1010,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cvuOgMwIVlfgWcUMqg5p33NbGUxLwMrKtDKkm3QRfOo4PRVNR6+y/xd9OyXTVZiB1bIpKNJ0ZObYPWD3DRQDtw==
+  /@intrnl/svelte-query/0.3.1_svelte@3.29.0:
+    dependencies:
+      svelte: 3.29.0
+    dev: true
+    peerDependencies:
+      svelte: ^3.24.0
+    resolution:
+      integrity: sha512-0r5YA9O2OpVWMQuT45WX4EGBdl7dME2dX/DrqwuLwEQVpmb0cMc9XROt3k3+x6/rIleoCgwB+VKjYbCeQ5xqtg==
   /@nodelib/fs.scandir/2.1.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.3
@@ -2887,6 +2897,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-8GVWEJaj8dou9GJy+BXIQNh+DIk=
+  /isomorphic-fetch/3.0.0:
+    dependencies:
+      node-fetch: 2.6.1
+      whatwg-fetch: 3.4.1
+    dev: false
+    resolution:
+      integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==
   /jest-worker/26.3.0:
     dependencies:
       '@types/node': 14.11.2
@@ -3259,6 +3276,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==
+  /node-fetch/2.6.1:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
   /node-releases/1.1.61:
     dev: true
     resolution:
@@ -4921,6 +4944,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
+  /whatwg-fetch/3.4.1:
+    dev: false
+    resolution:
+      integrity: sha512-sofZVzE1wKwO+EYPbWfiwzaKovWiZXf4coEzjGP9b2GBVgQRLQUZ2QcuPpQExGDAW5GItpEm6Tl4OU5mywnAoQ==
   /which-pm-runs/1.0.0:
     dev: true
     resolution:
@@ -5017,6 +5044,7 @@ specifiers:
   '@babel/preset-env': 7.11.5
   '@babel/runtime': 7.11.2
   '@fullhuman/postcss-purgecss': 3.0.0
+  '@intrnl/svelte-query': 0.3.1
   '@rollup/plugin-babel': 5.2.1
   '@rollup/plugin-commonjs': 15.1.0
   '@rollup/plugin-node-resolve': 9.0.0
@@ -5034,6 +5062,7 @@ specifiers:
   eslint-plugin-prettier: 3.1.4
   eslint-plugin-svelte3: 2.7.3
   husky: 4.3.0
+  isomorphic-fetch: 3.0.0
   lint-staged: 10.4.0
   polka: next
   postcss: 8.1.1
