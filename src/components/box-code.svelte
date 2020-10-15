@@ -4,6 +4,8 @@
   export let title;
   export let description;
   export let tags;
+
+  import { scale } from 'svelte/transition';
 </script>
 
 <style>
@@ -54,7 +56,7 @@
   }
 </style>
 
-<a href={url} target="_blank" rel="noopener noreferrer" class="box md:w-1/2 lg:w-1/3">
+<a transition:scale href={url} target="_blank" rel="noopener noreferrer" class="box md:w-1/2 lg:w-1/3">
   <div>
     <small class="uppercase">{type}</small>
     <h3 class="heading">{title}</h3>

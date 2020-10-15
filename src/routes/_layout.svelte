@@ -4,7 +4,7 @@
 
 <!-- TODO: add navbar -->
 
-<main class="min-h-screen">
+<main>
   <slot />
 </main>
 
