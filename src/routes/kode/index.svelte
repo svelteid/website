@@ -114,7 +114,7 @@
 
   <section class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
     {#each results as code}
-      <BoxCode {...code} />
+      <BoxCode selectedTags={$selectedTags} {...code} />
     {/each}
   </section>
 </section>

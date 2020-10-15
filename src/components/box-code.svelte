@@ -4,6 +4,7 @@
   export let title;
   export let description;
   export let tags;
+  export let selectedTags;
 
   import { scale } from 'svelte/transition';
 </script>
@@ -47,11 +48,16 @@
   .tag {
     @apply p-1;
     @apply m-1;
-    @apply bg-primary;
     @apply rounded-md;
     @apply whitespace-no-wrap;
     @apply font-bold;
     @apply text-xs;
+    @apply bg-gray-200;
+    @apply text-gray-500;
+  }
+
+  .tag-selected {
+    @apply bg-primary;
     @apply text-white;
   }
 </style>
@@ -64,6 +70,8 @@
   </div>
 
   <div class="tags">
-    {#each tags.split(',') as tag}<span class="tag">#{tag.trim()}</span>{/each}
+    {#each tags.split(',') as tag}
+      <span class="tag" class:tag-selected={selectedTags.has(tag.trim())}>#{tag.trim()}</span>
+    {/each}
   </div>
 </a>
