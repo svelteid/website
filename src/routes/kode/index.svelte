@@ -39,6 +39,7 @@
 <style>
   .heading {
     @apply mt-0;
+    @apply mb-0;
   }
 
   .tags {
@@ -72,6 +73,7 @@
     @apply cursor-pointer;
     @apply bg-gray-200;
     @apply text-gray-500;
+    @apply uppercase;
   }
 
   .tag-selected {
@@ -81,9 +83,9 @@
 </style>
 
 <section class="wrapper prose prose-lg bg-gray-100 min-h-screen">
-  <header class="text-center">
-    <h6 class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</h6>
+  <header class="text-center mb-4">
     <h2 class="heading">KODE</h2>
+    <h6 class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</h6>
   </header>
 
   <div class="w-full flex justify-center mb-4">

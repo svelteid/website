@@ -14,6 +14,7 @@
 <style>
   .heading {
     @apply mt-0;
+    @apply mb-0;
   }
 
   .link {
@@ -74,7 +75,7 @@
 </section>
 
 <section class="wrapper prose prose-lg bg-gray-100 mt-10">
-  <header class="text-center">
+  <header class="text-center mb-4">
     <span class="uppercase">Mau Belajar Svelte?</span>
     <h2 class="heading">Materi Pembelajaran</h2>
   </header>
@@ -109,9 +110,9 @@
 </section>
 
 <section class="wrapper prose prose-lg bg-gray-100 mt-10">
-  <header class="text-center">
-    <span class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</span>
+  <header class="text-center mb-4">
     <h2 class="heading">KODE</h2>
+    <span class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</span>
   </header>
 
   <section class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">

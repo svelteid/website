@@ -54,6 +54,7 @@
     @apply text-xs;
     @apply bg-gray-200;
     @apply text-gray-500;
+    @apply uppercase;
   }
 
   .tag-selected {
@@ -71,7 +72,7 @@
 
   <div class="tags">
     {#each tags.split(',') as tag}
-      <span class="tag" class:tag-selected={selectedTags.has(tag.trim())}>#{tag.trim()}</span>
+      <span class="tag" class:tag-selected={selectedTags && selectedTags.has(tag.trim())}>#{tag.trim()}</span>
     {/each}
   </div>
 </a>
