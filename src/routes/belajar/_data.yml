@@ -21,3 +21,9 @@
   title: Belajar Frontend Framework Svelte
   description: Belajar Svelte dengan menjalankan tutorial resmi Svelte dalam format livestreaming.
   featured: true
+
+- url: https://flaviocopes.com/page/ebooks
+  type: buku
+  title: Buku Svelte Handbook
+  description: Buku Svelte Handbook adalah salah satu buku yang ditulis oleh Flavio Copes untuk belajar Svelte JS dengan mudah dan cepat
+  featured: false
