@@ -12,6 +12,7 @@
 <style>
   .heading {
     @apply mt-0;
+    @apply mb-0;
   }
 
   .link {
@@ -72,7 +73,7 @@
 </section>
 
 <section class="wrapper prose prose-lg bg-gray-100 mt-10">
-  <header class="text-center">
+  <header class="text-center mb-4">
     <span class="uppercase">Mau Belajar Svelte?</span>
     <h2 class="heading">Materi Pembelajaran</h2>
   </header>

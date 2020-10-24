@@ -3,3 +3,27 @@
   title: Dokumentasi Svelte
   description: Dokumentasi Svelte adalah salah satu sumber terlengkap. Kamu bisa menemukan segalanya, di mulai dari tutorial, contoh-contoh, sampai ke referensi API
   featured: true
+
+- url: https://buildwithangga.com/kelas/svelte-javascript-web-development
+  type: course
+  title: Svelte JavaScript Web Development
+  description: Perkenalan Svelte untuk membangun aplikasi web yang menarik. Beberapa topik yang dibahas yaitu komponen, data, binding dan reaktif, css, lifecycle, dan animasi.
+  featured: false
+
+- url: https://buildwithangga.com/kelas/sveltejs-front-end-javascript-development-web-donasi-online
+  type: course
+  title: Front-End JavaScript Development
+  description: Menggunakan Svelte untuk membangun aplikasi web dengan nama Charity yang dapat menerima donasi atau pembayaran online dengan bantuan payment gateway.
+  featured: true
+
+- url: https://www.youtube.com/playlist?list=PLTY2nW4jwtG_knaEtI4H-nCljg8hpBCAx
+  type: livestreaming
+  title: Belajar Frontend Framework Svelte
+  description: Belajar Svelte dengan menjalankan tutorial resmi Svelte dalam format livestreaming.
+  featured: true
+
+- url: https://flaviocopes.com/page/ebooks
+  type: buku
+  title: Buku Svelte Handbook
+  description: Buku Svelte Handbook adalah salah satu buku yang ditulis oleh Flavio Copes untuk belajar Svelte JS dengan mudah dan cepat
+  featured: false

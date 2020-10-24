@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "@svelteid/website",
+  "description": "website for svelte id community",
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
@@ -40,6 +40,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-svelte3": "2.7.3",
+    "fuse.js": "6.4.2",
     "husky": "4.3.0",
     "lint-staged": "10.4.0",
     "postcss": "8.1.1",
