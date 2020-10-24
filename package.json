@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "@svelteid/website",
+  "description": "website for svelte id community",
   "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
