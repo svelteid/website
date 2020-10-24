@@ -2,8 +2,10 @@
   import config from '../site.config.yml';
   import SEO from '../components/seo.svelte';
   import BoxLearning from '../components/box-learning.svelte';
+  import BoxCode from '../components/box-code.svelte';
   import SvelteLogo from '../components/icons/svelte.svelte';
   import learnings from './belajar/_data.yml';
+  import codes from './kode/_data.yml';
 
   const { siteName, description } = config;
   const title = 'Komunitas Svelte Indonesia';
@@ -12,6 +14,7 @@
 <style>
   .heading {
     @apply mt-0;
+    @apply mb-0;
   }
 
   .link {
@@ -72,7 +75,7 @@
 </section>
 
 <section class="wrapper prose prose-lg bg-gray-100 mt-10">
-  <header class="text-center">
+  <header class="text-center mb-4">
     <span class="uppercase">Mau Belajar Svelte?</span>
     <h2 class="heading">Materi Pembelajaran</h2>
   </header>
@@ -88,6 +91,41 @@
   {#if learnings.length >= 3}
     <footer class="text-center">
       <a href="/belajar" class="button-link">
+        Lihat Lebih Banyak
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="ml-1">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </footer>
+  {/if}
+</section>
+
+<section class="wrapper prose prose-lg bg-gray-100 mt-10">
+  <header class="text-center mb-4">
+    <h2 class="heading">KODE</h2>
+    <span class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</span>
+  </header>
+
+  <section class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
+    {#each codes as code}
+      {#if code.featured}
+        <BoxCode {...code} />
+      {/if}
+    {/each}
+  </section>
+
+  {#if codes.length >= 3}
+    <footer class="text-center">
+      <a href="/kode" class="button-link">
         Lihat Lebih Banyak
 
         <svg
