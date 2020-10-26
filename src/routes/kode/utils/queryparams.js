@@ -1,10 +1,5 @@
 import { writable } from 'svelte/store';
 
-/*
-Creates a custom store for managing a set of strings synced to `location.search`.
-The code currently only works syncing with a single array value -
-multiple query params are not supported yet.
-*/
 export const createQueryParamSet = (paramName, initialItems = extractQueryParamArray(paramName)) => {
   const { subscribe, set, update } = writable(new Set(initialItems));
 

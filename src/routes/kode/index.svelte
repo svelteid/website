@@ -2,14 +2,14 @@
   import BoxCode from '../../components/box-code.svelte';
   import codes from './_data.yml';
   import Fuse from 'fuse.js';
-  import { createQueryParamSet } from './utils/queryparams.js';
+  import { createQueryParamSet } from './utils/queryParams.js';
   import { filterByTags } from './utils/filter.js';
 
   let tags = [...new Set(codes.map(code => code.tags.split(',').map(x => x.trim())).flat())];
 
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0, // top of Resources
+      top: 0,
       left: 0,
       behavior: 'smooth'
     });
