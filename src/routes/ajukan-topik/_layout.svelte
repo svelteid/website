@@ -4,12 +4,17 @@
 
 <style>
   .wrapper {
-    @apply p-4;
+    @apply px-4;
+    @apply py-2;
+    @apply max-w-none;
   }
   @media (min-width: 768px) {
+    .wrapper {
+      @apply px-20;
+    }
     .illustration {
       @apply sticky;
-      top: 40px;
+      top: 50px;
     }
   }
 </style>
