@@ -2,8 +2,8 @@
   import BoxCode from '../../components/box-code.svelte';
   import codes from './_data.yml';
   import Fuse from 'fuse.js';
-  import { createQueryParamSet } from './utils/queryParams.js';
-  import { filterByTags } from './utils/filter.js';
+  import { createQueryParamSet } from './utils/query_params';
+  import { filterByTags } from './utils/filter';
 
   let tags = [...new Set(codes.map(code => code.tags.split(',').map(x => x.trim())).flat())];
 
