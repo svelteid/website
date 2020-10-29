@@ -8,6 +8,8 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import { mdsvex } from 'mdsvex';
+import svelteSVG from 'rollup-plugin-svelte-svg';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -24,12 +26,16 @@ const onwarn = (warning, onwarn) =>
 const svelteOptions = {
   dev,
   hydratable: true,
-  preprocess: sveltePreprocess({
-    postcss: true,
-    defaults: {
-      style: 'postcss'
-    }
-  })
+  extensions: ['.svelte', '.svx'],
+  preprocess: [
+    sveltePreprocess({
+      postcss: true,
+      defaults: {
+        style: 'postcss'
+      }
+    }),
+    mdsvex()
+  ]
 };
 
 export default {
@@ -52,6 +58,7 @@ export default {
       }),
       commonjs(),
       yaml(),
+      svelteSVG({ dev }),
 
       legacy &&
         babel({
@@ -104,7 +111,8 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
-      yaml()
+      yaml(),
+      svelteSVG({ generate: 'ssr', dev })
     ],
     external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 
