@@ -24,11 +24,13 @@ async function get(endpoint, params) {
   }
 }
 
-export function getListEvent(offset, limit) {
+export function getListEvent(offset = 1, limit = 15) {
   const fetcher = (_, page, page_size) => {
     return get(`/organizations/${ORGANIZATION_ID}/events`, {
       page,
-      page_size
+      page_size,
+      order_by: 'start_desc',
+      status: 'live,started,ended'
     });
   };
 
@@ -42,5 +44,5 @@ export function getStructuredEvent(eventId) {
     });
   };
 
-  return query(['structureEvent', eventId], fetcher);
+  return query(['structureEvent', eventId], fetcher, { enabled: !!eventId });
 }
