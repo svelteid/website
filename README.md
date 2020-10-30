@@ -7,6 +7,9 @@ Repositori ini merupakan _source code_ untuk [svelteid.org](https://svelteid.org
 Bagaimanapun Anda mendapatkan kodenya, Anda dapat menginstal dependensi dan menjalankan proyek dalam mode pengembangan dengan:
 
 ```bash
+# kopi contoh berkas env
+cp .env.example .env
+
 # instal dependensi
 npm install
 
