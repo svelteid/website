@@ -1,4 +1,8 @@
-<script>
+<section class="text-lg h-screen flex flex-col justify-center items-center">
+  <p class="my-4">Halaman ini sedang dalam tahap perbaikan</p>
+</section>
+
+<!--<script>
   import BoxEvent from '../../components/box-event.svelte';
   import { getListEvent } from '../../services/eventbrite';
 
@@ -8,9 +12,7 @@
 
   // TODO: handle infinite scroll
   $: query.refetch(['events', offset, limit]);
-</script>
-
-<div class="container mx-auto px-4">
+</script><div class="container mx-auto px-4">
   {#if $query.status === 'loading'}
     {#each [...Array(5)] as _}
       <BoxEvent />
@@ -49,4 +51,4 @@
       <BoxEvent {event} />
     {/each}
   {/if}
-</div>
+</div> -->
