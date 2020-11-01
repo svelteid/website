@@ -1,6 +1,6 @@
 # @svelteid/website
 
-Repositori ini merupakan _source code_ untuk [svelteid.org](https://svelteid.org).
+Repositori ini merupakan _source code_ untuk [sveltejs.id](https://sveltejs.id).
 
 ## Menjalankan proyek
 

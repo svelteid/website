@@ -1,6 +1,6 @@
 # Panduan Berkontribusi
 
-Kami menerima _pull requests_ dari siapapun! Dokumen berikut berisi panduan berkontribusi di repositori situs [svelteid.org](https://svelteid.org).
+Kami menerima _pull requests_ dari siapapun! Dokumen berikut berisi panduan berkontribusi di repositori situs [sveltejs.id](https://sveltejs.id).
 
 ## Mengerjakan Issues
 
