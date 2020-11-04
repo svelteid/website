@@ -1,9 +1,9 @@
 <script>
-  import BoxCode from '../../components/box-code.svelte';
-  import codes from './_data.yml';
   import Fuse from 'fuse.js';
-  import { createQueryParamSet } from './utils/query_params';
-  import { filterByTags } from './utils/filter';
+  import { filterByTags } from '~/utils/filter.js';
+  import { createQueryParamSet } from '~/utils/query-params.js';
+  import BoxCode from '~/components/ui/box-code.svelte';
+  import codes from './_data.yml';
 
   let tags = [...new Set(codes.map(code => code.tags.split(',').map(x => x.trim())).flat())];
 
@@ -38,7 +38,6 @@
 
 <style>
   .heading {
-    @apply mt-0;
     @apply mb-0;
   }
 
@@ -82,10 +81,10 @@
   }
 </style>
 
-<section class="wrapper prose prose-lg bg-gray-100 min-h-screen">
+<section class="container prose prose-lg bg-gray-100 min-h-screen py-10 mt-1">
   <header class="text-center mb-4">
     <h2 class="heading">KODE</h2>
-    <h6 class="uppercase">Mencari Library atau Boilerplate berbasis Svelte ?</h6>
+    <span class="uppercase">Mencari Library atau Boilerplate berbasis Svelte?</span>
   </header>
 
   <div class="w-full flex justify-center mb-4">
@@ -99,7 +98,9 @@
           stroke-width="2"
           viewBox="0 0 24 24"
           color="#AAA"
-          class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          class="w-6 h-6">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
       </span>
       <input type="search" bind:value={searchterm} class="input" placeholder="Cari sesuatu..." />
     </div>
@@ -107,14 +108,13 @@
 
   <div class="tags">
     {#each tags as tag}
-      <span
-        class="tag"
-        class:tag-selected={$selectedTags.has(tag)}
-        on:click={() => selectedTags.toggle(tag)}>#{tag}</span>
+      <span class="tag" class:tag-selected={$selectedTags.has(tag)} on:click={() => selectedTags.toggle(tag)}>
+        #{tag}
+      </span>
     {/each}
   </div>
 
-  <section class="sm:grid sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
+  <section class="grid grid-flow-row gap-4 md:grid-cols-2 lg:grid-cols-3">
     {#each results as code}
       <BoxCode selectedTags={$selectedTags} {...code} />
     {/each}
