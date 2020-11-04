@@ -3,6 +3,7 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
+import alias from '@rollup/plugin-alias';
 import yaml from '@rollup/plugin-yaml';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
@@ -22,6 +23,10 @@ const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   warning.code === 'THIS_IS_UNDEFINED' ||
   onwarn(warning);
+
+const aliasPath = {
+  entries: [{ find: '~', replacement: 'src' }]
+};
 
 const svelteOptions = {
   dev,
@@ -57,6 +62,7 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
+      alias(aliasPath),
       yaml(),
       svelteSVG({ dev }),
 
@@ -111,6 +117,7 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
+      alias(aliasPath),
       yaml(),
       svelteSVG({ generate: 'ssr', dev })
     ],
