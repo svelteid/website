@@ -11,7 +11,7 @@
 
 <style>
   .box {
-    height: 320px;
+    @apply h-box;
     @apply w-full;
     @apply no-underline;
     @apply px-4;
@@ -30,10 +30,6 @@
   .box:hover {
     @apply shadow-lg;
     @apply cursor-pointer;
-  }
-
-  .heading {
-    @apply mt-0;
   }
 
   .paragraph {
@@ -66,7 +62,7 @@
 <a transition:scale href={url} target="_blank" rel="noopener noreferrer" class="box md:w-1/2 lg:w-1/3">
   <div>
     <small class="uppercase">{type}</small>
-    <h3 class="heading">{title}</h3>
+    <h3>{title}</h3>
     <p class="paragraph">{description}</p>
   </div>
 

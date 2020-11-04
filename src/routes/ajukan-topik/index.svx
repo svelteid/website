@@ -1,5 +1,5 @@
 <script>
-  import ButtonAjukanTopik from '../../components/button-ajukan-topik.svelte';
+  import ButtonAjukanTopik from '~/components/ui/button-ajukan-topik.svelte';
 </script>
 
 <style>
