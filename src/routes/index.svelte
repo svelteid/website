@@ -4,6 +4,7 @@
   import { fade, draw } from 'svelte/transition';
   import { expand } from '~/utils/custom-transition.js';
   import config from '~/site.config.yml';
+  import SEO from '~/components/seo.svelte';
   import BoxLearning from '~/components/ui/box-learning.svelte';
   import learnings from './belajar/_data.yml';
 
@@ -59,6 +60,8 @@
     @apply bg-gray-900;
   }
 </style>
+
+<SEO {title} />
 
 <section class="container prose prose-lg lg:flex my-6 lg:mx-6">
   <div class="self-center sm:px-4 lg:w-2/3">

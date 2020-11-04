@@ -1,7 +1,10 @@
 <script>
+  import SEO from '~/components/seo.svelte';
   import BoxLearning from '~/components/ui/box-learning.svelte';
   import learnings from './_data.yml';
 </script>
+
+<SEO title="Materi Pembelajaran" />
 
 <section class="container prose prose-lg bg-gray-100 min-h-screen py-10 mt-1">
   <header class="text-center">

@@ -2,6 +2,7 @@
   import Fuse from 'fuse.js';
   import { filterByTags } from '~/utils/filter.js';
   import { createQueryParamSet } from '~/utils/query-params.js';
+  import SEO from '~/components/seo.svelte';
   import BoxCode from '~/components/ui/box-code.svelte';
   import codes from './_data.yml';
 
@@ -80,6 +81,8 @@
     @apply text-white;
   }
 </style>
+
+<SEO title="Kode" />
 
 <section class="container prose prose-lg bg-gray-100 min-h-screen py-10 mt-1">
   <header class="text-center mb-4">

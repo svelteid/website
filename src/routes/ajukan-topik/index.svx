@@ -1,5 +1,6 @@
 <script>
-  import ButtonAjukanTopik from '~/components/ui/button-ajukan-topik.svelte';
+  import SEO from "~/components/seo.svelte";
+  import ButtonAjukanTopik from "~/components/ui/button-ajukan-topik.svelte";
 </script>
 
 <style>
@@ -14,6 +15,8 @@
     @apply font-light;
   }
 </style>
+
+<SEO title="Ajukan Topik" />
 
 # Ajukan Topik
 

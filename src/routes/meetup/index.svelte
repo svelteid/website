@@ -1,3 +1,9 @@
+<script>
+  import SEO from '~/components/seo.svelte';
+</script>
+
+<SEO title="Meetup" />
+
 <section class="text-lg h-screen flex flex-col justify-center items-center">
   <p class="my-4">Halaman ini sedang dalam tahap perbaikan</p>
 </section>
