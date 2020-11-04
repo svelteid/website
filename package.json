@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev --ext \".svelte .svx\"",
     "predev": "npm run build:tw",
-    "export": "sapper export --legacy",
+    "export": "sapper export --legacy --ext \".svelte .svx\"",
     "preexport": "NODE_ENV=production npm run build:tw",
     "build:tw": "postcss src/styles/global.css -o static/global.css",
     "lint": "eslint --fix \"**/*.{js,svelte}\"",
