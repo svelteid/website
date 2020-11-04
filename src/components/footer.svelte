@@ -5,8 +5,13 @@
   }
 </style>
 
-<footer class="py-6 bg-gray-900 text-gray-300">
-  <span class="pl-20">&copy; Svelte ID 2020</span>
-  <span class="pr-20 float-right">Mau kontribusi? Ambil
-    <a href="https://github.com/svelteid/website/issues" target="_blank" rel="noopener noreferrer">isu di Github</a>!</span>
+<footer class="bg-gray-900 text-gray-300 py-6 px-2 md:px-6 flex flex-col text-center text-sm">
+  <p>&copy; Svelte ID 2020</p>
+  <p>
+    Mau berkontribusi? Lihat
+    <a href="https://github.com/svelteid/website/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">
+      cara berkontribusi
+    </a>
+    di Github
+  </p>
 </footer>
