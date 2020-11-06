@@ -1,8 +1,9 @@
 <script>
-  import Footer from '../components/footer.svelte';
+  import Header from '~/components/ui/header.svelte';
+  import Footer from '~/components/ui/footer.svelte';
 </script>
 
-<!-- TODO: add navbar -->
+<Header />
 
 <main>
   <slot />

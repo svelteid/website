@@ -1,5 +1,5 @@
 import fs from 'fs';
-import config from '../site.config.yml';
+import config from '~/site.config.yml';
 
 const { siteUrl } = config;
 

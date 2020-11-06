@@ -1,15 +1,17 @@
 <script>
   import { stores } from '@sapper/app';
-  import config from '../site.config.yml';
+  import config from '~/site.config.yml';
 
   const { page } = stores();
-  const { siteUrl } = config;
+  const { siteName, siteUrl } = config;
 
   export let title;
   export let thumbnail = undefined;
   export let keywords = config.keywords;
   export let description = config.description;
   export let isPost = false;
+
+  title = $page.path === '/' ? `${title} • ${siteName}` : `${siteName} • ${title}`;
 </script>
 
 <svelte:head>

@@ -10,6 +10,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import { mdsvex } from 'mdsvex';
+import image from 'svelte-image';
 import svelteSVG from 'rollup-plugin-svelte-svg';
 
 const mode = process.env.NODE_ENV;
@@ -28,10 +29,21 @@ const aliasPath = {
   entries: [{ find: '~', replacement: 'src' }]
 };
 
+const extensions = ['.svelte', '.svx'];
+
+const svelteImageOptions = {
+  placeholder: 'trace',
+  trace: {
+    threshold: 120,
+    color: '#ff3c00',
+    background: '#fff'
+  }
+};
+
 const svelteOptions = {
   dev,
+  extensions,
   hydratable: true,
-  extensions: ['.svelte', '.svx'],
   preprocess: [
     sveltePreprocess({
       postcss: true,
@@ -39,7 +51,8 @@ const svelteOptions = {
         style: 'postcss'
       }
     }),
-    mdsvex()
+    mdsvex(),
+    image(svelteImageOptions)
   ]
 };
 
@@ -68,7 +81,7 @@ export default {
 
       legacy &&
         babel({
-          extensions: ['.js', '.mjs', '.html', '.svelte'],
+          extensions: ['.js', '.mjs', '.html', ...extensions],
           babelHelpers: 'runtime',
           exclude: ['node_modules/@babel/**'],
           presets: [
