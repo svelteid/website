@@ -2,7 +2,6 @@
   const links = [
     { href: '/belajar', text: 'Belajar' },
     { href: '/kode', text: 'Kode' },
-    { href: '/meetup', text: 'Meetup' },
     { href: '/ajukan-topik', text: 'Ajukan Topik' }
   ];
 </script>
@@ -15,6 +14,8 @@
       {#each links as { href, text }}
         <li class="m-4"><a {href}>{text}</a></li>
       {/each}
+
+      <li class="m-4"><a href="https://s.sveltejs.id/meetup" target="_blank" rel="noopener noreferrer"> Meetup </a></li>
     </ul>
   </nav>
 </header>
